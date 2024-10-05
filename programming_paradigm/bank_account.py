@@ -1,19 +1,21 @@
 
 
-class BankAccount():
-    def __init__(self,initial_balance=0):
-        self.account_balance = initial_balance
-    def deposit(self,amount):
-        self.account_balance += amount
-        return amount
-    def withdraw(self,amount):
-        if amount <= account_balance:
-            self.account_balance -= amount
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        self._account_balance = initial_balance  
+
+    def deposit(self, amount):
+        if amount > 0:
+            self._account_balance += amount
+
+    def withdraw(self, amount):
+        if amount <= self._account_balance:
+            self._account_balance -= amount
             return True
         else:
             return False
 
-    def display_balance():
-        print(f"your balance is : {account_balance}")
+    def display_balance(self):
+        print(f"Current Balance: ${self._account_balance:.2f}")
 
 
