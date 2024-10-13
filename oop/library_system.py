@@ -4,7 +4,7 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f"book:'{self.title}' , {self.author}"
+        return f"Book: {self.title} by {self.author}"
 
 
 # Derived Class: EBook
@@ -14,7 +14,7 @@ class EBook(Book):
         self.file_size = file_size  # Additional attribute for eBook
 
     def __str__(self):
-        return f"ebook: {super().__str__()} (File size: {self.file_size}MB)"
+        return f"E{super().__str__()} File size: {self.file_size}MB"
 
 
 # Derived Class: PrintBook
@@ -24,7 +24,7 @@ class PrintBook(Book):
         self.page_count = page_count  # Additional attribute for PrintBook
 
     def __str__(self):
-        return f"printbook: {super().__str__()} (Page count: {self.page_count})"
+        return f"Print{super().__str__()} Page count: {self.page_count}"
 
 
 # Composition Class: Library
